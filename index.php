@@ -1,9 +1,9 @@
 <?php
-require("connection.php");
+require("assets/includes/connection.php");
 
-$query = $conn->prepare('SELECT * FROM lists ORDER BY name');
+$query = $conn->prepare('SELECT * FROM lists ORDER BY id');
 $query->execute();
-// Counts how many characters there are
+// Counts how many lists there are
 $count = $query->rowCount();
 
 // Close connection with database
@@ -33,13 +33,15 @@ $conn = null;
             <?php
         // Display the characters data
             foreach ($query as $row) {
-                echo "<div class='characters'>
+                echo "<div class='lists'>
                 <div class='info'>
                 <div class='title'>$row[1]</div>
-                <div class='stats'>
+                <div class='description'>
+                <div class='smalldesc'>$row[2]</div>
+                <div class='DurationStart'> $row[3] - $row[4]</div>
                 </div>
                 </div>
-                <a href='ListTask.php?id=$row[0]' class='bekijk'><i class='fas fa-search'></i> bekijk</a>
+                <a href='characterinfo.php?id=$row[0]' class='look'><i class='fas fa-search'></i> bekijk</a>
                 <hr>
                 </div>";
             }

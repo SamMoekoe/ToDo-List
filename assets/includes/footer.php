@@ -1,5 +1,5 @@
 <footer>
     <div>
-    Sam Moekardanoe 19A2 ©2020
+    Sam Moekardanoe 19A2 ©2021
     </div>
 </footer>

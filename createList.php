@@ -15,7 +15,7 @@ require('assets/includes/functions.php');
   <h1>create list</h1>
 </body>
 </html>
-<form action="insertList.php" method="POST" onSubmit="window.close()">
+<form action="insertList.php" method="POST">
 <label for="name">Name</label>
   <input type="text" id="name" name="name"><br><br>
   <label for="description">Description</label>

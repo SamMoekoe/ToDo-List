@@ -6,7 +6,7 @@ $time = date("Y-m-d h:i:sa");
 ?>
 
 
-<form action="insertTask.php" method="POST" onSubmit= "window.close();">
+<form action="insertTask.php" method="POST">
   <input name="listid" type="hidden" Value="<?php echo $listid; ?>">
   <label for="name">Name</label>
   <input type="text" id="name" name="name"><br><br>
